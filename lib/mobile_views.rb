@@ -20,5 +20,7 @@ module MobileViews
     self.class.prepend_view_path Rails.root.join("app", "views", controller_name, "#{action_name}_mobile")
   end
 
-  base.before_action :set_mobile_view_path, if: :mobile_device?
+  def self.included(base)
+    base.before_action :set_mobile_view_path, if: :mobile_device?
+  end
 end

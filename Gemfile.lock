@@ -1,0 +1,21 @@
+PATH
+  remote: .
+  specs:
+    mobile_views (0.1.0)
+      device_detector
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    device_detector (1.0.7)
+    rake (13.0.6)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  mobile_views!
+  rake (~> 13.0)
+
+BUNDLED WITH
+   2.3.20
