@@ -1,22 +1,24 @@
 # MobileViews
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/mobile_views`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem detects mobile users and will redirect them to a #{view_name}_mobile.html.erb file if it exists.
+So a mobile user will be served the index_mobile.html.erb file instead of index.html.erb
 
-TODO: Delete this and the text above, and describe your gem
+The device detection is made possible thanks to the Device Detector gem: https://github.com/podigee/device_detector
 
 ## Installation
 
-Install the gem and add to the application's Gemfile by executing:
+Add this line to your application's Gemfile:
 
-    $ bundle add mobile_views
+    gem "mobile_views"
+    
+Then include the MobileViews module to your application.rb controller:
 
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install mobile_views
+    ApplicationController < ActionController::Base
+        include MobileViews
 
 ## Usage
 
-TODO: Write usage instructions here
+Whenever you need a specific view for mobile, just create a copy of your view.html.erb file and rename it to view_mobile.html.erb
 
 ## Development
 
