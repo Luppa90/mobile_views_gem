@@ -8,7 +8,7 @@ module MobileViews
   def mobile_device?
     user_agent = request.headers['User-Agent']
     client = DeviceDetector.new(user_agent)
-    mobile_devices = %w[smartphone tablet feature_phone phablet smart_display wearable]
+    mobile_devices = %w[smartphone feature_phone phablet smart_display wearable]
     mobile_devices.include?(client.device_type)
   end
 
